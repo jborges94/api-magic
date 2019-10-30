@@ -1,6 +1,7 @@
 package edu.tallerjava.controladores;
 
 import edu.tallerjava.modelo.Category;
+import edu.tallerjava.modelo.CategoryMeliDTO;
 import edu.tallerjava.servicios.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,8 @@ public class CategoriesController {
     private CategoryService categoryService;
 
     @GetMapping(path = "/categories")
-    public List<Category> getCategories(){
+    public List<CategoryMeliDTO> getCategories(){
+
         return categoryService.GetAll();
     }
 
